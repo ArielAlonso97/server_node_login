@@ -6,6 +6,6 @@
     "mongoose": "^8.9.4"
   },
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon api/app.js"
   }
 }
