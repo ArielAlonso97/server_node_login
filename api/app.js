@@ -1,8 +1,8 @@
 
 import express from 'express';
 const app = express()
-import { connectDB } from "./config/db.js"
-import productRouter from "./routes/productsRouter.js"
+import { connectDB } from "../config/db.js"
+import productRouter from "../routes/productsRouter.js"
 
 
 
