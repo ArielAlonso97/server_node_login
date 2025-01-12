@@ -6,4 +6,5 @@ import { getAllProducts } from '../products/controller/products_controller.js';
 productRouter.get('/', getAllProducts);
 
 
+
 export default productRouter

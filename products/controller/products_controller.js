@@ -6,7 +6,8 @@ export async function getAllProducts(req,res) {
         res.json(productsa)
         console.log(productsa)
     }catch(e){
-        res.status(500).json({message:'Error al obtener productos', e})
+        const message = res.text
+        res.status(500).json({message:'Error al obtener productos', message})
     }
     
 }
