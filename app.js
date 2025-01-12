@@ -1,11 +1,18 @@
-const express = require("express")
+
+import express from 'express';
 const app = express()
-const port = 300
+import { connectDB } from "./config/db.js"
+import productRouter from "./routes/productsRouter.js"
+
+
+
+connectDB()
 
 app.get("/",(req,res)=>{
     res.json({"hello":'Hello word!'})
 })
 
+app.use('/api/products',productRouter)
 
 // Ejecutar el servidor local solo si no estamos en Vercel
 if (process.env.NODE_ENV !== 'production') {
@@ -15,4 +22,4 @@ if (process.env.NODE_ENV !== 'production') {
     });
   }
 
-module.exports = app;
+export default app;
